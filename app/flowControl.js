@@ -10,6 +10,24 @@ exports.flowControlAnswers = {
     //
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
+    var divisibleBy3 = num%3 == 0;
+    var divisibleBy5 = num%5 == 0;
+    var returnStr = "";
+    if (parseInt(num)) {
+        if (!divisibleBy3 && !divisibleBy5) {
+            return num;
+        }
+        if (divisibleBy3) {
+            returnStr += "fizz";
+        }
+        if (divisibleBy5) {
+            returnStr += "buzz";
+        }
+        return returnStr;
+    }
+    else {
+        return false;
+    }
 
   }
 };
